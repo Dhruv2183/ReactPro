@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding-right: 2rem;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 5px 15px; /* Maintain spacing between cards */
+  width: 700px; /* Default width for larger screens */
+  max-width: 100%; /* Allow it to adjust on smaller screens */
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  backdrop-filter: blur(5px);
+  padding: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.card-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem; /* Slightly reduced font size */
+  color: #000000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem; /* Adjusted font size */
+  color: #000000;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.card-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-features li {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem; /* Adjusted font size */
+  color: #000000;
+}
+
+.about-us-button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2px;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: auto; /* Maintain auto width for desktop */
+}
+
+.about-us-button:hover {
+  background-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 30px); /* Two cards per row */
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% - 20px); /* Full width on smaller tablets */
+    margin: 5px;
+  }
+
+  .card-content {
+    width: 90%; /* Slightly smaller width to fit better */
+  }
+
+  .about-us-button {
+    width: 100%; /* Make button full width on mobile */
+    padding: 12px; /* Adjust padding for mobile */
+    margin-top: 15px; /* Space above the button */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  /* Remove hover effects for tablets and smaller screens */
+  .card:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    padding-right: 1rem;
+    margin-left: 2%;
+    width: 96%;
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Full width on mobile */
+    margin: 10px 0; /* Adjust margin for mobile */
+    padding: 10px;
+  }
+
+  .card-title {
+    font-size: 1.4rem; /* Adjust font size for mobile */
+  }
+
+  .card-description {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    margin: 0.3rem 0;
+  }
+
+  .card-features li {
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+
+  .about-us-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    margin: 10px 0; /* Ensure the button has margin inside the card */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  /* Remove hover effects for mobile screens */
+  .card:hover {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Landscape mode adjustments for mobile */
+@media (max-width: 480px) and (orientation: landscape) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    width: 100%; /* Ensure full width */
+    margin: 0; /* Remove margin for better visibility */
+    padding: 0; /* Remove padding for better layout */
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Full width for each card */
+    margin: 10px 0; /* Adjust margin for mobile */
+    padding: 15px; /* Maintain padding for content visibility */
+  }
+}

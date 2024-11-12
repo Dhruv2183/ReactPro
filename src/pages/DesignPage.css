@@ -1,0 +1,214 @@
+/* Background Container */
+.background-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensures the container takes full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    background: url('./images/img9.jpg') no-repeat center center; /* Custom background image */
+    background-size: cover; /* Make the background image responsive */
+}
+
+/* Semi-transparent overlay on background for opacity effect */
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(246, 248, 251, 0.2); /* Semi-transparent overlay with 20% opacity */
+    z-index: 1;
+}
+
+.right-aligned-container {
+    position: relative;
+    margin-left: 30px; /* Adjust this value to control space from the left side */
+}
+
+/* Heading Styling */
+.design-heading {
+    color: #7e7e7e; /* Darker gray for better contrast */
+    font-size: 4.5rem; /* Slightly larger font for impact */
+    font-weight: bold; /* Add bold weight for emphasis */
+    margin-bottom: 10px; /* Space below heading, less than before */
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.3), /* Subtle shadow for depth */
+        0 0 15px rgba(241, 241, 241, 0.2); /* Soft glow effect */
+    font-family: 'Raleway', sans-serif;
+    position: absolute; /* Positioning the heading above the slider */
+    top: 80px; /* Adjust top position as needed */
+    left: 250px; /* Align heading to the left */
+}
+
+/* Carousel Container with Static Border (No Gradient Animation) */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set max width for the carousel */
+    height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3); /* Static border with 30% opacity */
+    margin-top: 60px; /* Space between heading and carousel */
+    margin-left: 80px; /* No left margin */
+}
+
+/* Carousel Structure */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.slides-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0); /* Slightly darkened caption background */
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.carousel-button:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.75rem;
+    z-index: 10;
+}
+
+.indicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .design-heading {
+        font-size: 3.5rem; /* Reduce heading size */
+        left: 50%; /* Center heading */
+        transform: translateX(-50%); /* Center adjustment */
+    }
+
+    .carousel-container {
+        margin-left: 20px; /* Adjust left margin for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .background-container {
+        background-size: cover; /* Make sure the background covers the area */
+        background-position: center; /* Center the background */
+    }
+
+    .carousel-container {
+        height: 400px; /* Adjust carousel height */
+        margin-left: 10px; /* Reduce left margin further */
+    }
+
+    .carousel-button {
+        width: 2.5rem; /* Reduce button size */
+        height: 2.5rem; /* Reduce button size */
+    }
+
+    .slide figcaption {
+        padding: 1rem; /* Reduce caption padding */
+        font-size: 1rem; /* Adjust caption font size */
+    }
+
+    .design-heading {
+        font-size: 3rem; /* Further reduce heading size */
+        top: 40px; /* Adjust top position */
+    }
+}
+
+@media (max-width: 480px) {
+    .design-heading {
+        font-size: 2.5rem; /* Smaller heading size for very small screens */
+        top: 20px; /* Adjust top position further */
+    }
+
+    .carousel-container {
+        height: 300px; /* Adjust carousel height */
+    }
+
+    .slide figcaption {
+        font-size: 0.9rem; /* Smaller caption font size */
+    }
+}

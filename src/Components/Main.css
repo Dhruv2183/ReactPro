@@ -1,0 +1,39 @@
+.main-container {
+  position: relative;
+  margin: 0;
+  display: flex; /* Use flexbox for a more responsive layout */
+  flex-direction: column; /* Stack child elements vertically */
+}
+
+.full-height {
+  position: relative;
+  height: auto; /* Change to auto to allow it to grow based on content */
+  overflow: hidden; /* Keep this if you want to prevent overflow */
+}
+
+.relative-zindex {
+  position: relative;
+  z-index: 1; /* Ensure this section is above the background */
+}
+
+/* Collection section styles */
+.collection-section {
+  position: relative;
+  z-index: 2;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+/* Design section styles */
+.design-section {
+  position: relative;
+  z-index: 3;
+  padding: 2rem; /* Add padding for spacing */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .collection-section,
+  .design-section {
+    padding: 1rem; /* Adjust padding on mobile */
+  }
+}

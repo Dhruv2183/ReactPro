@@ -1,0 +1,77 @@
+.background {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  background: no-repeat center center;
+  background-size: cover;
+  transition: background-image 0.5s ease; /* Smooth transition for background changes */
+}
+
+/* Overlay for background opacity */
+.background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity here (0.5 = 50% opacity) */
+  z-index: -1; /* Place the overlay behind content */
+}
+
+/* General Styles for Main Content */
+.main-content {
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+  .background {
+    background-position: center; /* Center the background */
+    background-size: cover; /* Cover the entire area */
+  }
+
+  .main-content {
+    padding-top: 15vh; /* Adds space above content */
+    padding-bottom: 15vh; /* Adds space below content */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 20vh; /* More padding to prevent overlap on small screens */
+    padding-bottom: 20vh; /* More space below content */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+}
+
+/* Ensure content visibility in portrait mode */
+@media (orientation: portrait) {
+  .main-content {
+    padding-top: 10vh; /* Adjust padding for portrait mode */
+    padding-bottom: 10vh; /* Adjust padding for portrait mode */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+}
+
+/* Ensure background responsiveness */
+@media (max-width: 768px) {
+  .background {
+    height: auto; /* Allow background height to adjust */
+    min-height: 100vh; /* Ensure minimum height covers the viewport */
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    height: auto; /* Allow background height to adjust */
+    min-height: 100vh; /* Ensure minimum height covers the viewport */
+  }
+}

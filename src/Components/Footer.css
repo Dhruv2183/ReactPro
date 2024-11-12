@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+.footer {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/img12.jpg');
+    background-size: cover; /* Ensure background covers the footer */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repeating */
+    color: #fff;
+    padding: 80px 30px; /* Padding around the footer */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Blur effect */
+    position: relative;
+    height: 88vh; /* Set height */
+    z-index: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Column direction */
+    justify-content: center; /* Center content vertically */
+    font-family: 'Raleway', sans-serif; /* Font */
+}
+
+.footer-content {
+    display: flex; /* Flexbox layout for footer content */
+    flex-direction: column; /* Column direction */
+    align-items: flex-end; /* Align items to the right */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Full height */
+    margin: 0; /* Reset margin */
+    font-size: 1.1em; /* Font size */
+}
+
+.footer-logo {
+    margin-bottom: 30px; /* Space below logo */
+    font-size: 2.5rem; /* Logo font size */
+    color: #e0e0e0; /* Logo color */
+}
+
+.footer-nav h2, .social-links h2 {
+    font-size: 1.8rem; /* Section heading size */
+    margin-bottom: 1rem; /* Space below heading */
+    color: #fff; /* Heading color */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 600; /* Font weight */
+}
+
+.footer-copy {
+    font-size: 1.3rem; /* Copyright text size */
+    margin: 20px 0; /* Space above and below */
+    color: #e0e0e0; /* Color */
+}
+
+.footer-nav, .social-links, .footer-terms {
+    display: flex; /* Flexbox layout */
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: flex-end; /* Align to the right */
+    margin: 20px 0; /* Margin above and below */
+}
+
+.footer-nav {
+    align-items: center; /* Center align items */
+}
+
+.social-links {
+    align-items: center; /* Center align items */
+}
+
+.footer-link {
+    color: #e0e0e0; /* Link color */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Font size for links */
+    padding: 10px 15px; /* Padding around links */
+    border-radius: 5px; /* Rounded corners */
+    transition: color 0.3s, background-color 0.3s; /* Transition effects */
+}
+
+.footer-link:hover {
+    color: #fff; /* Hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background */
+}
+
+.social-link {
+    color: #e0e0e0; /* Social link color */
+    text-decoration: none; /* No underline */
+    font-size: 1.5rem; /* Font size */
+    transition: color 0.3s ease; /* Transition effects */
+    margin: 0 5px; /* Space between icons */
+}
+
+.social-link:hover {
+    color: #fff; /* Hover color */
+}
+
+.social-link.facebook {
+    color: #3b5998; /* Facebook color */
+}
+
+.social-link.instagram {
+    color: #e1306c; /* Instagram color */
+}
+
+.social-link.twitter {
+    color: #1da1f2; /* Twitter color */
+}
+
+.social-link.linkedin {
+    color: #0077b5; /* LinkedIn color */
+}
+
+.footer-terms {
+    margin-top: 30px; /* Space above terms */
+    color: #e0e0e0; /* Terms color */
+}
+
+.footer-terms a {
+    margin: 0 15px; /* Space between terms links */
+    color: #e0e0e0; /* Color */
+    transition: color 0.3s, background-color 0.3s; /* Transition effects */
+    padding: 5px 10px; /* Padding */
+    border-radius: 3px; /* Rounded corners */
+}
+
+.footer-terms a:hover {
+    color: #fff; /* Hover color */
+    background-color: rgba(255, 255, 255, 0.1); /* Hover background */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 20px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .footer-content {
+        align-items: center; /* Center items on small screens */
+    }
+
+    .footer-logo {
+        font-size: 2rem; /* Adjust logo size */
+    }
+
+    .footer-nav h2, .social-links h2 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .footer-copy {
+        font-size: 1.2rem; /* Adjust copyright text size */
+    }
+
+    .footer-link {
+        font-size: 1rem; /* Smaller link font size */
+    }
+
+    .social-link {
+        font-size: 1.2rem; /* Smaller social link font size */
+    }
+
+    .footer-terms {
+        flex-direction: column; /* Stack terms vertically */
+        align-items: center; /* Center align items */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        font-size: 1.5rem; /* Further reduce logo size */
+    }
+
+    .footer-nav, .social-links {
+        flex-direction: column; /* Stack links vertically on extra small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .footer-link {
+        font-size: 0.9rem; /* Further reduce link font size */
+    }
+
+    .social-link {
+        font-size: 1rem; /* Further reduce social link font size */
+    }
+}

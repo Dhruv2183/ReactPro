@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+.design {
+    position: relative;
+    height: auto;
+    min-height: 105vh;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 2rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.main-card {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: left;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.main-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #c7c7c7;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #dcdcdc;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.inner-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.inner-card {
+    position: relative;
+    width: 30%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.4s ease;
+}
+
+.inner-card:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 15px rgba(9, 9, 9, 0.3);
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px; /* Increased image height for desktop */
+    object-fit: cover;
+}
+
+.feature-note {
+    padding: 0.5rem;
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.feature-note h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.feature-note p {
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.explore-button {
+    margin-top: 2.2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #232020;
+}
+
+@media (max-width: 1024px) {
+    .main-card {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .inner-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-card {
+        width: 80%;
+        margin-bottom: 1rem;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .inner-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .feature-image {
+        height: 180px; /* Reduced height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .design {
+        padding: 1rem;
+    }
+
+    .main-card {
+        width: 95%;
+    }
+
+    .inner-card {
+        width: 95%;
+    }
+
+    .feature-image {
+        height: 150px; /* Further reduced height for mobile */
+    }
+}
