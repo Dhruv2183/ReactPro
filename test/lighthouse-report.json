@@ -1,0 +1,30 @@
+{
+    "performance": {
+      "score": 0.92,
+      "metrics": {
+        "first-contentful-paint": 1.2,
+        "speed-index": 2.1,
+        "largest-contentful-paint": 2.3,
+        "interactive": 2.8,
+        "total-blocking-time": 120,
+        "cumulative-layout-shift": 0.05
+      },
+      "opportunities": [
+        {
+          "title": "Optimize images",
+          "description": "Compress images to reduce payload size",
+          "score": 0.15
+        }
+      ]
+    },
+    "accessibility": {
+      "score": 0.95,
+      "issues": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure text has sufficient contrast",
+          "elements": [".sale-banner"]
+        }
+      ]
+    }
+  }
